@@ -1,0 +1,18 @@
+# Channel Details
+title=My New Channel
+subtitle=Roku Sample Channel App
+major_version=1
+minor_version=1
+build_version=1
+
+# Channel Assets
+mm_icon_focus_hd=pkg:/images/ch-icon-hd.jpg
+
+
+# Splash Screen + Loading Screen Artwork
+splash_screen_hd=pkg:/images/splash-bg-hd.jpg
+splash_color=#808080
+splash_min_time=0
+# Resolution
+ui_resolutions=hd
+

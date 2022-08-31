@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="Battery" extends="Scene">
+    <script type="text/brightscript" uri="battery.brs" />
+    <children>
+
+        <Label
+            id="myLabel"
+            text="Battery"
+            width="1280"
+            horizAlign="center"
+            vertAlign="top"
+            />
+        <Label
+            id="myLabel2"
+            text="Charging..."
+            width="1280"
+            height = "720"
+            horizAlign="center"
+            vertAlign="bottom"
+            />
+    </children>
+    <children>
+        <Rectangle
+            id="mainPart"
+            color="0xffffff"
+            width="720"
+            height="360"
+            translation="[280,180]">
+        <Group id = "ChargingParts" >
+            <!-- <Rectangle
+                id="chargPart1"
+                color="0xff0000"
+                width="120"
+                height="320"
+                translation="[20,20]">
+            </Rectangle> -->
+            
+            
+            <SequentialAnimation id = "exampleSequentialAnimation" >
+
+                <Animation 
+                  duration = "3" 
+                  easeFunction = "linear" >
+        
+                  <ColorFieldInterpolator 
+
+                        key = "[ 0.0, 1.0 ]" 
+                        keyValue = "[ 0xff000000, 0xff0000ff ]" 
+                        fieldToInterp = "chargPart1.color"
+                        /> 
+                        
+                </Animation>
+        
+                <Animation 
+                  duration = "3" 
+                  easeFunction = "linear" >
+                  <ColorFieldInterpolator 
+
+                    key = "[ 0.0, 1.0 ]" 
+                    keyValue = "[ 0xff000000, 0xff0000ff ]" 
+                    fieldToInterp = "chargPart2.color"
+                  /> 
+                  
+        
+                </Animation>
+        
+                <Animation 
+                  duration = "3" 
+                  easeFunction = "linear" >
+                  <ColorFieldInterpolator 
+
+                    key = "[ 0.0, 1.0 ]" 
+                    keyValue = "[ 0xff000000, 0xff0000ff ]" 
+                    fieldToInterp = "chargPart3.color"
+                  /> 
+                  
+        
+                </Animation>
+        
+                <Animation 
+                  duration = "3" 
+                  easeFunction = "linear" >
+                  <ColorFieldInterpolator 
+
+                    key = "[ 0.0, 1.0 ]" 
+                    keyValue = "[ 0xff000000, 0xff0000ff ]" 
+                    fieldToInterp = "chargPart4.color"
+                  /> 
+                  
+                </Animation>
+                <Animation 
+                duration = "3" 
+                easeFunction = "linear" >
+                <ColorFieldInterpolator 
+                  key = "[ 0.0, 1.0 ]" 
+                  keyValue = "[ 0xff000000, 0xff0000ff ]" 
+                  fieldToInterp = "chargPart5.color"
+                /> 
+                
+              </Animation>
+        
+              </SequentialAnimation>
+        </Group>
+        <Label
+                id="signCharging"
+                text="Z"
+                color = "0x00FF00"  
+                translation="[220,40]"
+                 >
+                <Font role = "font" uri = "pkg:/components/fonts/Pointers.ttf" size = "344" /> 
+            </Label>
+        </Rectangle>
+        <Rectangle
+            id="smallPart"
+            color="0xffffff"
+            width="50"
+            height="200"
+            translation="[1000,270]"
+        >
+        </Rectangle>
+
+    </children>
+    
+</component>
